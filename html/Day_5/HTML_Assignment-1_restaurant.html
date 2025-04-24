@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Glenary’s Restaurant – Menu</title>
+  <style>
+    :root {
+      --brand: #343f4e;
+      --accent: #e67e22;
+      --light: #fafafa;
+      --border: #e0e0e0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+    }
+    body {
+      background: var(--light);
+      color: #222;
+      line-height: 1.5;
+    }
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    }
+    header h1 { font-size: 1.25rem; font-weight: 600; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      position: relative;
+    }
+    header nav a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 0; height: 2px;
+      background: var(--accent);
+      transition: .3s ease;
+    }
+    header nav a:hover::after { width: 100%; }
+
+    .menu-wrap {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .menu-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform .25s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,.12);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      height: 170px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .card-body p {
+      font-size: .9rem;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-weight: 600;
+    }
+    .video {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-top: 12px;
+    }
+    .video iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- top bar -->
+  <header>
+    <h1>Glenary’s Restaurant</h1>
+    <nav>
+      <a href="#">Menu</a>
+      <a href="#">Popular Dishes</a>
+    </nav>
+  </header>
+
+  <!-- menu -->
+  <section class="menu-wrap">
+    <h2 class="menu-title">Menu</h2>
+    <div class="cards">
+
+      <!-- Pizza Supreme -->
+      <article class="card">
+        <img
+          src="https://media.istockphoto.com/id/1151446369/photo/tasty-supreme-pizza-with-olives-peppers-onions-and-sausage.jpg?s=2048x2048&w=is&k=20&c=0wO_57v-d1rne8OxuTv80z3Y7U0ByyPjHBGhrI8a7u0="
+          alt="Pizza Supreme">
+        <div class="card-body">
+          <h3>Pizza Supreme</h3>
+          <p>Pizza sauce, mozzarella, bacon, onion, bell pepper, capsicum, pepperoni &amp; mushrooms.</p>
+          <span class="price">Price: ₹350</span>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/xxGxfPpLQVs"
+              title="Pizza Supreme recipe video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </article>
+
+      <!-- Paneer Tikka -->
+      <article class="card">
+        <img
+          src="https://suhana.com/cdn/shop/articles/paneer-tikka-2-1.png?v=1709544706"
+          alt="Paneer Tikka">
+        <div class="card-body">
+          <h3>Paneer Tikka</h3>
+          <p>Paneer, yogurt, ground spices, bell peppers, onion, baby corn &amp; mushrooms.</p>
+          <span class="price">Price: ₹300</span>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/Ccga9wOkA4c"
+              title="Paneer Tikka recipe video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</body>
+</html>
